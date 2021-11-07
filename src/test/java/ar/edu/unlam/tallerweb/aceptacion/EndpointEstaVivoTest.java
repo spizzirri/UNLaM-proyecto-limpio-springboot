@@ -1,6 +1,6 @@
-package ar.edu.unlam.tallerweb.controladores;
+package ar.edu.unlam.tallerweb.aceptacion;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class ControladorBasicoTest {
+public class EndpointEstaVivoTest {
 
     @Autowired
     public TestRestTemplate restTemplate;
@@ -22,16 +22,16 @@ public class ControladorBasicoTest {
     @Test
     public void elEndpoint_estaVivo_deberiaDevolver_estoyVivo(){
 
-        String respuesta = cuandoHagoUnaPeticionGETA("/estavivo");
-        entoncesObtengoLaRespuesta(respuesta);
+        String respuesta = cuandoHagoUnaPeticionGETAEstaVivo();
+        entoncesObtengoLaRespuestaEstoyVivo(respuesta);
     }
 
-    private String cuandoHagoUnaPeticionGETA(String path){
-        final String url = "http://localhost:" + puerto + path;
-        return restTemplate.getForObject(path, String.class);
+    private String cuandoHagoUnaPeticionGETAEstaVivo(){
+        final String url = "http://localhost:" + puerto + "/estavivo";
+        return restTemplate.getForObject(url, String.class);
     }
 
-    private void entoncesObtengoLaRespuesta(String respuesta){
+    private void entoncesObtengoLaRespuestaEstoyVivo(String respuesta){
         assertThat(respuesta).isEqualTo("Estoy vivo");
     }
 }
