@@ -6,6 +6,7 @@
 
 ### Charla (en ingles)
 * [Video presentacion](https://tanzu.vmware.com/content/springone-platform-2017/its-a-kind-of-magic-under-the-covers-of-spring-boot-brian-clozel-st%C3%A9phane-nicoll)
+* [Video TDD](https://tanzu.vmware.com/content/springone-platform-2017/test-driven-development-with-spring-boot-sannidhi-jalukar-madhura-bhave)
 
 ### Propiedades para configurar
 * [Link](https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html)
