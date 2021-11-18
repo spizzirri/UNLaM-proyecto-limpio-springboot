@@ -4,6 +4,13 @@
 3. Provee dependencias configuradas por defecto para agilizar el arranque del proyecto.
 4. No necesita archivos XML de configuracion.
 
+### Capas disponibles para hacer pruebas
+* Respositorios
+* Servicios
+* Controladores
+* Web
+  * Springboot nos facilita la ejecución de estas pruebas dado que con cada prueba podemos pedirle que ejecute tomcat tambien. De esta manera en lugar de probar la llamada a un metodo del controlador, probamos enviando una peticion http.
+
 ### Charla en español
 * [Video entrevista](https://www.youtube.com/watch?v=ajA6F1y8iYE)
 
