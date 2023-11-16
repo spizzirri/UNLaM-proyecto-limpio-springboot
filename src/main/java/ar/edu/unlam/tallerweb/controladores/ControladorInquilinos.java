@@ -22,11 +22,11 @@ public class ControladorInquilinos {
     @GetMapping(path = "/inquilinos")
     public ResponseEntity<List<Inquilino>> obtenerInquilinos(){
         List<Inquilino> inquilinos = this.servicioInquilino.consultarInquilinos();
-        if(inquilinos.size() == 0){
+        if(inquilinos.isEmpty()){
             return ResponseEntity.noContent().build();
              //new ResponseEntity(inquilinos, HttpStatus.NO_CONTENT);
         }else{
-            return new ResponseEntity(inquilinos, HttpStatus.OK);
+            return new ResponseEntity<>(inquilinos, HttpStatus.OK);
         }
     }
 
